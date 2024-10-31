@@ -1,16 +1,14 @@
 import streamlit as st
 from PIL import Image
 
-# Título centrado con estilo
-#st.markdown("<h1 style='text-align: center; color: #661200;'>TÚ chinito de confianza</h1>", unsafe_allow_html=True)
-
 # Cargar la imagen
 image = Image.open('Remmy.png')
 
-# Centrar la imagen
-st.markdown("<div style='image-align: center;'>", unsafe_allow_html=True)
-st.image(image, caption='.')  # Cambia el valor de width según lo necesites
-st.markdown("</div>", unsafe_allow_html=True)
+
+# Usar columnas para centrar la imagen
+col1, col2, col3 = st.columns([1, 2, 1])  # Ajusta las proporciones según necesites
+with col2:
+    st.image(img, width=300)
 
 # Texto interactivo
 st.write("¿Qué quieres preparar el día de hoy?")
