@@ -5,7 +5,7 @@ from PIL import Image
 #st.markdown("<h1 style='text-align: center; color: #661200;'>TÚ chinito de confianza</h1>", unsafe_allow_html=True)
 
 # Cargar la imagen
-image = Image.open('Remmy.png')
+image = Image.open('Ini.png')
 
 # Centrar la imagen
 st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
