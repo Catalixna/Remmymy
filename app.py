@@ -8,7 +8,7 @@ from PIL import Image
 image = Image.open('Remmy.png')
 
 # Centrar la imagen
-st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
+st.markdown("<div style='image-align: center;'>", unsafe_allow_html=True)
 st.image(image, caption='.')  # Cambia el valor de width según lo necesites
 st.markdown("</div>", unsafe_allow_html=True)
 
