@@ -6,8 +6,10 @@ st.image(image, caption='.', width=300)
 
 st.write("¿Qué quieres preparar el día de hoy?")
 
-# Buscador
-search_query = st.text_input("Buscar recetas:", "")
+st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
+st.image(image, caption='.', width=300)  # Cambia el valor de width según lo necesites
+st.markdown("</div>", unsafe_allow_html=True)
+
 
 # Aquí puedes manejar la lógica para buscar recetas basadas en la consulta
 if search_query:
