@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 image = Image.open('Remmy.png')
-st.image(image, caption='.', use_column_width=True)
+st.image(image, caption='.', width=300)
 
 st.write("¿Qué quieres preparar el día de hoy?")
 
