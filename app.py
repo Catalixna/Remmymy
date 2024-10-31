@@ -9,7 +9,7 @@ image = Image.open('Ini.png')
 
 # Centrar la imagen
 st.markdown("<div style='text-align: center;'>", unsafe_allow_html=True)
-st.image(image, caption='Tu imagen aquí', width=300)  # Cambia el valor de width según lo necesites
+st.image(image, caption='Tu imagen aquí')  # Cambia el valor de width según lo necesites
 st.markdown("</div>", unsafe_allow_html=True)
 
 # Texto interactivo
