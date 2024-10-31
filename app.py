@@ -3,7 +3,7 @@ from PIL import Image
 
 # Cargar la imagen
 image = Image.open('Remmy.png')
-
+st.image(image, caption='.', use_column_width=True)
 
 # Usar columnas para centrar la imagen
 col1, col2, col3 = st.columns([1, 2, 1])  # Ajusta las proporciones según necesites
