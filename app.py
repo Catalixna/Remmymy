@@ -1,14 +1,9 @@
 import streamlit as st
 from PIL import Image
 
-st.markdown(
-    """<h1 style='text-align: center;'>
-        <span style='color: #2b337d;'>Sobre </span>
-        <span style='color: #4256a9;'>las</span>
-        <span style='color: #5f7195;'>Capibaras</span></h1>""",unsafe_allow_html=True)
-st.header("En está pagina veras información de las capibaras:")
-st.write("_Los capibaras son los roedores más grandes del mundo, conocidos por su naturaleza tranquila y amigable. Viven cerca del agua y les encanta nadar. Con su pelaje marrón y su cuerpo robusto, ¡son unos verdaderos campeones acuáticos! Son herbívoros y siempre están en grupo, disfrutando de la vida en comunidad._")
-image = Image.open('capipi.jpg')
+#st.markdown("<h1 style='text-align: center; color: #661200;'>TÚ chinito de confianza</h1>", unsafe_allow_html=True)
+
+image = Image.open('Remmy.png')
 
 st.image(image, caption='Capibara')
 
