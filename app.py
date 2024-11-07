@@ -1,25 +1,15 @@
-try:
-    import streamlit as st
-    from PIL import Image
-    from gtts import gTTS
-    import os
-except ModuleNotFoundError as e:
-    st.error(f"Error de importación: {e}. Asegúrate de que todos los módulos necesarios están instalados.")
-    st.stop()  # Detiene la ejecución si faltan módulos
+import streamlit as st
+from PIL import Image
+from gtts import gTTS
+import os
 
 # Cargar la imagen
-image_path = 'Remmy.png'  # Asegúrate de que la imagen esté en el directorio correcto
-if os.path.exists(image_path):
-    image = Image.open(image_path)
-else:
-    st.error("No se encuentra la imagen 'Remmy.png'.")
-    image = None
+image = Image.open('Remmy.png')
 
 # Usar columnas para centrar la imagen
 col1, col2, col3 = st.columns([1, 2, 1])  # Ajusta las proporciones según necesites
-if image:
-    with col2:
-        st.image(image, caption='Tu receta a un clic', width=300)
+with col2:
+    st.image(image, caption='Tu receta a un clic', width=300)
 
 # Texto interactivo
 st.write("¿Qué quieres preparar el día de hoy?")
