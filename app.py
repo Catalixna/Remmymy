@@ -17,17 +17,15 @@ st.write("¿Qué quieres preparar el día de hoy?")
 # Buscador
 search_query = st.text_input("Buscar recetas:", "")
 
+# Función para reproducir y manejar el archivo de audio
+def play_audio(query):
+    audio_file = "search_query.mp3"
+    tts = gTTS(text=query, lang='es')
+    tts.save(audio_file)
+    st.audio(audio_file, format='audio/mp3')
+    os.remove(audio_file)  # Eliminar después de reproducir
+
 if search_query:
     st.write(f"Buscando recetas para: **{search_query}**")
-    
-    # Convertir el texto a audio
-    tts = gTTS(text=search_query, lang='es')
-    audio_file = "search_query.mp3"
-    tts.save(audio_file)  # Guarda el audio en un archivo
-    
-    # Reproduce el audio
-    st.audio(audio_file, format='audio/mp3')
+    play_audio(search_query)
 
-    # Limpia el archivo de audio después de usarlo
-    if os.path.exists(audio_file):
-        os.remove(audio_file)
